@@ -1,0 +1,59 @@
+/* Estilos para la sección de Conclusiones */
+.conclusiones-section {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+}
+
+.conclusiones-section .wrapper {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.conclusiones-section h2 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.conclusiones-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.conclusion-card {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.conclusion-card:hover {
+    background-color: #f0f0f0;
+}
+
+.conclusiones-grid h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.conclusiones-grid p {
+    text-align: justify;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* Media query para ajustar las tarjetas en pantallas pequeñas */
+@media screen and (max-width: 600px) {
+    .conclusiones-grid {
+        grid-template-columns: 1fr;
+    }
+}

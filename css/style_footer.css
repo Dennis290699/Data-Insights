@@ -1,0 +1,65 @@
+/* Estilos para la sección de Pie de Página */
+.footer-section {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.footer-section .wrapper {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.footer-section .content {
+    text-align: center;
+}
+
+.footer-section .footer-nav ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+.footer-section .footer-nav li {
+    display: inline;
+    margin-right: 15px;
+}
+
+.footer-section .footer-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-section .footer-nav a:hover {
+    text-decoration: underline;
+}
+
+.footer-section p {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.footer-section p:last-child {
+    margin-bottom: 0;
+}
+
+/* Ajuste para centrar los enlaces */
+.footer-section .footer-nav {
+    display: flex;
+    justify-content: center;
+}
+
+/* Media query para ajustar el pie de página en pantallas pequeñas */
+@media screen and (max-width: 600px) {
+    .footer-section .footer-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .footer-section .footer-nav li {
+        display: inline;
+        margin: 5px;
+    }
+}
