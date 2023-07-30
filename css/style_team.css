@@ -1,6 +1,7 @@
 /* Estilos para la sección de equipo */
 .team-section {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 50px 0;
@@ -176,6 +177,40 @@
     /* Cambia la sombra al pasar el mouse por encima */
     transform: translateY(-2px);
     /* Eleva ligeramente el icono */
+}
+
+/* Estilos para la caja "About More" */
+.about-more-box {
+    display: flex;
+    /* Cambiamos el display a inline-block para que aparezca debajo del texto */
+    background-color: #f2f2f2;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 40px;
+    /* Reducimos la separación superior */
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    max-width: 300px;
+    margin: 0 auto;
+    /* Centramos horizontalmente la caja */
+    border: 2px solid #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* Agregar margen para alejarlo del carrusel */
+    margin-top: 40px;
+}
+
+/* Efecto al pasar el mouse por encima de la caja */
+.about-more-box:hover {
+    background-color: #333;
+    color: #fff; /* Cambiar el color del texto al pasar el ratón sobre la caja */
 }
 
 @media screen and (max-width: 900px) {

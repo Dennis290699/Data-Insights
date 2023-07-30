@@ -51,13 +51,11 @@
 /* Estilos para la caja "Recursos Digitales" */
 .recursos-digitales-box {
     display: flex;
-    /* Cambiamos el display a inline-block para que aparezca debajo del texto */
     background-color: #f2f2f2;
     padding: 15px;
     border-radius: 8px;
     text-align: center;
     margin-top: 40px;
-    /* Reducimos la separación superior */
     margin-bottom: 20px;
     text-decoration: none;
     color: #333;
@@ -66,7 +64,6 @@
     transition: background-color 0.3s ease;
     max-width: 300px;
     margin: 0 auto;
-    /* Centramos horizontalmente la caja */
     border: 2px solid #333;
     display: flex;
     flex-direction: column;
@@ -76,7 +73,8 @@
 
 /* Efecto al pasar el mouse por encima de la caja */
 .recursos-digitales-box:hover {
-    background-color: #e0e0e0;
+    background-color: #333;
+    color: #fff; /* Cambiar el color del texto al pasar el ratón sobre la caja */
 }
 
 /* Estilos adicionales para ajustar la separación entre el texto y la imagen */

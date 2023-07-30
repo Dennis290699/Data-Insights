@@ -1,0 +1,126 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    display: flex; /* Añade display: flex para que el cuerpo ocupe toda la altura de la ventana */
+    flex-direction: column; /* Asegura que los elementos se coloquen en columna */
+    min-height: 100vh; /* Asegura que el cuerpo ocupe al menos toda la altura de la ventana */
+    background-color: #f9f9f9;
+}
+
+header {
+    background-color: #f2f2f2;
+    color: #333;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+main {
+    flex-grow: 1; /* Hace que el main crezca para ocupar todo el espacio disponible */
+    padding: 30px;
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #f9f9f9;
+}
+
+.source-element {
+    text-align: center;
+    margin-bottom: 40px;
+    flex-basis: 50%; /* Ajusta el ancho de cada miembro */
+}
+
+.source-element img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.source-element img:hover {
+    transform: scale(1.1);
+}
+
+.source-element h2 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.source-element p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.element-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Asegura que los enlaces se coloquen en una nueva fila si hay al menos dos */
+}
+
+.element-links a {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px 20px; /* Ajusta el relleno para que sea igual al del botón "Regresar" */
+    border: 2px solid #333; /* Agrega un borde al enlace */
+    border-radius: 8px; /* Agrega esquinas redondeadas al enlace */
+    font-size: 16px;
+    color: #333; /* Cambia el color del texto al del botón "Regresar" */
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.element-links a:hover {
+    background-color: #333;
+    color: #fff; /* Cambia el color del texto al del botón "Regresar" cuando se pasa el ratón sobre el enlace */
+}
+
+.back-to-home {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.back-to-home a {
+    color: #333;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 2px solid #333;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.back-to-home a:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+footer {
+    background-color: #333;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+    color: #fff;
+}
+
+@media screen and (max-width: 600px) {
+    main {
+        padding: 20px;
+        justify-content: center; /* Centrar el contenido en pantallas pequeñas */
+    }
+    
+    .source-element {
+        flex-basis: 100%; /* Cambia el ancho de cada miembro en pantallas pequeñas para que ocupen una columna completa */
+    }
+}
+
