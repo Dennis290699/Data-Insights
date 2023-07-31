@@ -104,7 +104,7 @@
         /* Eliminar el margen derecho en pantallas más pequeñas */
         margin-bottom: 20px;
         /* Agregar margen inferior para separar la imagen del texto */
-        width: 80%;
+        width: 50%;
         /* Reducir el ancho del contenedor de la imagen */
     }
 

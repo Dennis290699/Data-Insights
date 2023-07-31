@@ -110,7 +110,7 @@ footer {
     color: #fff;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 770px) {
     main {
         padding: 20px;
         justify-content: center; /* Centrar el contenido en pantallas pequeñas */

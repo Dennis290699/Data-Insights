@@ -1,5 +1,5 @@
 // JS PARA EL HEADER
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
     var header = document.querySelector('header');
     if (window.scrollY > 0) {
         header.classList.add('sticky');
@@ -46,6 +46,30 @@ navLinksList.forEach(link => {
         const target = link.getAttribute('href');
         smoothScrollTo(target);
     });
+});
+
+// PARA EL EFECTO ACTIVE
+$(document).ready(function () {
+    // Función para agregar/eliminar la clase "active" en la navegación
+    function setActiveLink() {
+        var scrollPosition = $(window).scrollTop();
+
+        // Itera a través de cada sección y verifica si está visible en la ventana
+        $('section').each(function () {
+            var topOffset = $(this).offset().top - 100; // Considera un offset de 100px para ajuste
+            var bottomOffset = topOffset + $(this).outerHeight();
+            var sectionId = $(this).attr('id');
+
+            if (scrollPosition >= topOffset && scrollPosition <= bottomOffset) {
+                // Agrega la clase "active" al enlace correspondiente en la navegación
+                $('nav ul li a').removeClass('active');
+                $('nav ul li a[href="#' + sectionId + '"]').addClass('active');
+            }
+        });
+    }
+
+    // Llama a la función cuando la página se carga y cuando se desplaza
+    $(window).on('load scroll', setActiveLink);
 });
 
 // PARA LA SECCION DE MIEMBROS DEL EQUIPO
