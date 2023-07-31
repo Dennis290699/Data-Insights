@@ -46,7 +46,7 @@
     position: absolute;
     text-align: center;
     line-height: 50px;
-    background: #f3bc6950;
+    background: #79e6be82;
     border-radius: 50%;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
     transform: translateY(-50%);
@@ -113,7 +113,7 @@
 }
 
 .team-section .carousel .card .img {
-    background: #f5c869;
+    background: #8d77a9cc;
     height: 148px;
     width: 148px;
     border-radius: 50%;
@@ -183,7 +183,7 @@
 .about-more-box {
     display: flex;
     /* Cambiamos el display a inline-block para que aparezca debajo del texto */
-    background-color: #f2f2f2;
+    background-color: #ffffff28;
     padding: 15px;
     border-radius: 8px;
     text-align: center;

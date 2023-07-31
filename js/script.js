@@ -48,7 +48,7 @@ navLinksList.forEach(link => {
     });
 });
 
-// PARA EL EFECTO ACTIVE
+// PARA EL EFECTO ACTIVE DEL HEADER
 $(document).ready(function () {
     // Función para agregar/eliminar la clase "active" en la navegación
     function setActiveLink() {
@@ -72,6 +72,19 @@ $(document).ready(function () {
     $(window).on('load scroll', setActiveLink);
 });
 
+//-----------------------------------------------------------------------------------------------------------------
+// PARA LA SECCION DE INICIO
+
+// Inicializa el carrusel 
+var swiper = new Swiper(".swiper-container", {
+    loop: true, // Para que el carrusel se reproduzca infinitamente
+    autoplay: {
+        delay: 2000, // Tiempo de transición entre imágenes (en milisegundos)
+        disableOnInteraction: false, // Para que el carrusel no se detenga al interactuar con él
+    },
+});
+
+//-----------------------------------------------------------------------------------------------------------------
 // PARA LA SECCION DE MIEMBROS DEL EQUIPO
 const wrapper = document.querySelector(".team-section .wrapper");
 const carousel = document.querySelector(".team-section .carousel");
@@ -144,3 +157,68 @@ carousel.addEventListener("mousedown", dragStart);
 carousel.addEventListener("mousemove", dragging);
 document.addEventListener("mouseup", dragStop);
 carousel.addEventListener("scroll", infiniteScroll);
+
+//-----------------------------------------------------------------------------------------------------------------
+// PARA LA SECCION DE GRAFICAS
+
+// Obtener el elemento título de la gráfica 1 y establecer su contenido
+var grafica1Titulo = document.getElementById("tituloGrafica1");
+grafica1Titulo.textContent = "Diagrama de Barras";
+
+// Obtener el elemento título de la gráfica 2 y establecer su contenido
+var grafica2Titulo = document.getElementById("tituloGrafica2");
+grafica2Titulo.textContent = "Diagrama de pastel";
+
+// Datos para las gráficas (ejemplo)
+const data1 = {
+    labels: ["Enero", "Febrero", "Marzo", "Abril", "Mayo"],
+    datasets: [{
+        label: "Datos de ejemplo 1",
+        data: [12, 19, 3, 5, 2],
+        backgroundColor: "rgba(255, 99, 132, 0.5)",
+        borderColor: "rgba(255, 99, 132, 1)",
+        borderWidth: 1
+    }]
+};
+
+const data2 = {
+    labels: ["Red", "Blue", "Yellow", "Green", "Purple"],
+    datasets: [{
+        label: "Datos de ejemplo 2",
+        data: [12, 19, 3, 5, 2],
+        backgroundColor: [
+            "rgba(255, 99, 132, 0.5)",
+            "rgba(54, 162, 235, 0.5)",
+            "rgba(255, 206, 86, 0.5)",
+            "rgba(75, 192, 192, 0.5)",
+            "rgba(153, 102, 255, 0.5)"
+        ],
+        borderColor: [
+            "rgba(255, 99, 132, 1)",
+            "rgba(54, 162, 235, 1)",
+            "rgba(255, 206, 86, 1)",
+            "rgba(75, 192, 192, 1)",
+            "rgba(153, 102, 255, 1)"
+        ],
+        borderWidth: 1
+    }]
+};
+
+// Opciones para las gráficas
+const options = {
+    responsive: true,
+    maintainAspectRatio: false // Permite mantener el tamaño en pantallas pequeñas
+};
+
+// Crear gráficas utilizando Chart.js
+new Chart(document.getElementById("grafica1"), {
+    type: "bar",
+    data: data1,
+    options: options
+});
+
+new Chart(document.getElementById("grafica2"), {
+    type: "pie",
+    data: data2,
+    options: options
+});

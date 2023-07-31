@@ -1,0 +1,65 @@
+/* Estilos para la sección de Gráficas */
+.graficas-section {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+}
+
+.graficas-section .wrapper {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.graficas-section h2 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.graficas-section h3 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.graficas-section p {
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.graficas-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.graficas-item {
+    padding: 20px;
+    padding-top: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    /* Agregar transición de cambio de color de fondo */
+    margin-bottom: 40px;
+}
+
+.graficas-item:hover {
+    background-color: #f0f0f0;
+    /* Cambiar el color de fondo al pasar el mouse sobre la tarjeta */
+}
+
+/* Media query para ajustar las tarjetas en pantallas pequeñas */
+@media screen and (max-width: 600px) {
+    .graficas-container {
+        grid-template-columns: 1fr;
+        /* Cambiar a una sola columna */
+    }
+}
