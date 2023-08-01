@@ -2,11 +2,12 @@
 window.addEventListener('scroll', function () {
     var header = document.querySelector('header');
     if (window.scrollY > 0) {
-        header.classList.add('sticky');
+        header.classList.add('sticky', 'scroll-active');
     } else {
-        header.classList.remove('sticky');
+        header.classList.remove('sticky', 'scroll-active');
     }
 });
+
 
 // PARA EL ICONO DE HAMBURGUESA
 const menuHamburger = document.querySelector(".menu-hamburger")

@@ -46,7 +46,7 @@
     position: absolute;
     text-align: center;
     line-height: 50px;
-    background: #79e6be82;
+    background: #7ecbfe4e;
     border-radius: 50%;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
     transform: translateY(-50%);
@@ -113,7 +113,7 @@
 }
 
 .team-section .carousel .card .img {
-    background: #8d77a9cc;
+    background: #7ecbfe9b;
     height: 148px;
     width: 148px;
     border-radius: 50%;
