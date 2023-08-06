@@ -1,0 +1,560 @@
+#dark-mode-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 9999; /* Asegura que la imagen esté en la parte superior */
+    transition: opacity 0.3s ease;
+}
+
+#dark-mode-toggle img {
+    width: 40px;
+    height: 40px;
+}
+
+/*ESTILOS PARA EL HEADER*/
+body[data-theme="dark"] header {
+    background-color: #333;
+    color: #f9f9f9;
+}
+
+body[data-theme="dark"] .transparent-header {
+    background-color: #333;
+}
+
+body[data-theme="dark"] header.scroll-active {
+    background-color: #484646;
+}
+
+body[data-theme="dark"] header h1 {
+    color: #f9f9f9;
+}
+
+body[data-theme="dark"] nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    /* Elimina el padding de la lista en modo oscuro */
+}
+
+body[data-theme="dark"] nav ul li {
+    margin-right: 10px;
+}
+
+body[data-theme="dark"] nav ul li a {
+    text-decoration: none;
+    color: #f9f9f9;
+    font-size: 16px;
+    position: relative;
+    transition: color 0.3s;
+    /* Agrega transición para el cambio de color en modo oscuro */
+}
+
+body[data-theme="dark"] nav ul li a:hover {
+    color: #fff;
+}
+
+body[data-theme="dark"] nav ul li a.active {
+    background-color: #444444;
+    color: #f9f9f9;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+body[data-theme="dark"] .bar1,
+body[data-theme="dark"] .bar2,
+body[data-theme="dark"] .bar3 {
+    background-color: #f9f9f9;
+}
+
+body[data-theme="dark"] .nav-links ul li a.active {
+    background-color: #ff92e499;
+}
+
+@media screen and (max-width: 900px) {
+
+    body[data-theme="dark"] .navbar .menu-hamburger {
+        width: 35px;
+        z-index: 2;
+    }
+
+    body[data-theme="dark"] .nav-links {
+        background-color: rgba(51, 51, 51, 0.8);
+        backdrop-filter: blur(8px);
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -100%;
+        transition: all 0.5s ease;
+        pointer-events: none;
+        z-index: 2;
+    }
+
+    body[data-theme="dark"] .mobile-menu {
+        margin-left: 0;
+        pointer-events: auto;
+    }
+
+    body[data-theme="dark"] .nav-links ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    body[data-theme="dark"] .navbar .nav-links ul li {
+        margin: 25px 0;
+        font-size: 1.2em;
+    }
+}
+
+/*ESTILOS PARA LA SECCION INICIO*/
+body[data-theme="dark"] .inicio-section {
+    background-color: #333;
+    color: #f9f9f9;
+    /* Color del texto en modo oscuro */
+}
+
+body[data-theme="dark"] .inicio-section h2 {
+    color: #f9f9f9;
+    /* Color del texto del h2 en modo oscuro */
+}
+
+body[data-theme="dark"] .inicio-section p {
+    color: #ccc;
+    /* Color del texto del p en modo oscuro */
+}
+
+body[data-theme="dark"] .inicio-section .image-container img {
+    border-radius: 50%;
+    /* Redondeado de la imagen en modo oscuro */
+}
+
+body[data-theme="dark"] .recursos-digitales-box {
+    background-color: #333;
+    color: #fff;
+    /* Color del texto en modo oscuro */
+    border: 2px solid #fff;
+}
+
+/* Efecto al pasar el mouse por encima de la caja en modo oscuro */
+body[data-theme="dark"] .recursos-digitales-box:hover {
+    background-color: #fff;
+    color: #333;
+    /*border: 4px solid #f9f9f9;*/
+    /* Cambiar el color del texto al pasar el ratón sobre la caja */
+}
+
+@media screen and (max-width: 900px) {
+    body[data-theme="dark"] .inicio-section .wrapper {
+        padding: 0 20px;
+        /* Agregar padding a la izquierda y derecha */
+    }
+
+    body[data-theme="dark"] .inicio-section .image-container {
+        margin-right: 0;
+        /* Eliminar el margen derecho en pantallas más pequeñas */
+    }
+
+    body[data-theme="dark"] .recursos-digitales-box {
+        max-width: 100%;
+        /* Hacer que el botón ocupe el ancho completo */
+    }
+}
+
+
+/*ESTILOS PARA LA SECCION EQUIPO*/
+body[data-theme="dark"] .team-section {
+    background-color: #333;
+    color: #f9f9f9;
+}
+
+body[data-theme="dark"] .team-section .team-introduction h2,
+body[data-theme="dark"] .team-section .team-introduction p {
+    color: #ccc;
+}
+
+body[data-theme="dark"] .team-section h2::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #ff92e499; /* Cambia el color del subrayado según tu preferencia */
+    bottom: 0;
+    left: 50%; /* Inicia desde la mitad del texto */
+    transform: translateX(-50%);
+    transition: width 0.3s ease-in-out; /* Ajusta la duración y el efecto de la animación */
+}
+
+body[data-theme="dark"] .team-section h2:hover::before {
+    width: 33%; /* Aumenta el ancho para crear el efecto de aparición */
+}
+
+body[data-theme="dark"] .team-section .carousel i {
+    color: #f9f9f9;
+}
+
+body[data-theme="dark"] .team-section .carousel .card {
+    background: #e0b0e6bb;
+    color: #f9f9f9;
+}
+
+body[data-theme="dark"] .team-section .carousel .card .img {
+    background: #71d0a2;
+}
+
+body[data-theme="dark"] .team-section .carousel .card h2 {
+    color: #f9f9f9;
+}
+
+body[data-theme="dark"] .team-section .carousel .card .social-icons a {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Efecto al pasar el mouse por encima de la tarjeta en modo oscuro */
+body[data-theme="dark"] .team-section .carousel .card:hover {
+    background-color: #f1aee6eb;
+    color: #f9f9f9;
+}
+
+/* Efecto al pasar el mouse por encima de los iconos en modo oscuro */
+body[data-theme="dark"] .team-section .carousel .card .social-icons a:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Estilos para la caja "About More" en modo oscuro */
+body[data-theme="dark"] .about-more-box {
+    background-color: #444;
+    color: #f9f9f9;
+    border: 2px solid #f9f9f9;
+}
+
+/* Efecto al pasar el mouse por encima de la caja "About More" en modo oscuro */
+body[data-theme="dark"] .about-more-box:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+
+/*ESTILOS PARA LA SECCION DESCRIPCION*/
+body[data-theme="dark"] .descripcion-section {
+    background-color: #333;
+    color: #f9f9f9;
+}
+
+body[data-theme="dark"] .descripcion-section .wrapper {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+body[data-theme="dark"] .descripcion-section h2 {
+    color: #f9f9f9;
+}
+
+body[data-theme="dark"] .descripcion-section h2::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #ff92e499; /* Cambia el color del subrayado según tu preferencia */
+    bottom: 0;
+    left: 50%; /* Inicia desde la mitad del texto */
+    transform: translateX(-50%);
+    transition: width 0.3s ease-in-out; /* Ajusta la duración y el efecto de la animación */
+}
+
+body[data-theme="dark"] .descripcion-section h2:hover::before {
+    width: 50%; /* Aumenta el ancho para crear el efecto de aparición */
+}
+
+body[data-theme="dark"] .descripcion-section p {
+    color: #ccc;
+}
+
+
+/*ESTILOS PARA LA SECCION VARIABLES*/
+body[data-theme="dark"] .variables-section {
+    background-color: #333;
+    color: #f9f9f9;
+}
+
+body[data-theme="dark"] .variables-section .wrapper {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+body[data-theme="dark"] .variables-section h2,
+body[data-theme="dark"] .variables-section h3 {
+    color: #f9f9f9;
+}
+
+body[data-theme="dark"] .variables-section h2::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #ff92e499; /* Cambia el color del subrayado según tu preferencia */
+    bottom: 0;
+    left: 50%; /* Inicia desde la mitad del texto */
+    transform: translateX(-50%);
+    transition: width 0.3s ease-in-out; /* Ajusta la duración y el efecto de la animación */
+}
+
+body[data-theme="dark"] .variables-section h2:hover::before {
+    width: 50%; /* Aumenta el ancho para crear el efecto de aparición */
+}
+
+body[data-theme="dark"] .variables-section p {
+    color: #ccc;
+}
+
+body[data-theme="dark"] .variable-card {
+    background-color: #444;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+body[data-theme="dark"] .variable-card:hover {
+    background-color: #555;
+}
+
+
+/*ESTILOS PARA LA SECCION GRAFICAS*/
+body[data-theme="dark"] .graficas-section {
+    background-color: #333;
+    color: #f9f9f9;
+}
+
+body[data-theme="dark"] .graficas-section h2,
+body[data-theme="dark"] .graficas-section h3,
+body[data-theme="dark"] .graficas-section p {
+    color: #f9f9f9;
+}
+
+body[data-theme="dark"] .graficas-section h2::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #ff92e499; /* Cambia el color del subrayado según tu preferencia */
+    bottom: 0;
+    left: 50%; /* Inicia desde la mitad del texto */
+    transform: translateX(-50%);
+    transition: width 0.3s ease-in-out; /* Ajusta la duración y el efecto de la animación */
+}
+
+body[data-theme="dark"] .graficas-section h2:hover::before {
+    width: 25%; /* Aumenta el ancho para crear el efecto de aparición */
+}
+
+body[data-theme="dark"] .graficas-item {
+    background-color: #444;
+}
+
+body[data-theme="dark"] .graficas-item:hover {
+    background-color: #555;
+}
+
+
+/*ESTILOS PARA LA SECCION CONCLUSIONES*/
+body[data-theme="dark"] .conclusiones-section {
+    background-color: #333;
+    color: #f9f9f9;
+}
+
+body[data-theme="dark"] .conclusiones-section .wrapper {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+body[data-theme="dark"] .conclusiones-section h2,
+body[data-theme="dark"] .conclusiones-grid h3 {
+    color: #f9f9f9;
+}
+
+body[data-theme="dark"] .conclusiones-section h2::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #ff92e499; /* Cambia el color del subrayado según tu preferencia */
+    bottom: 0;
+    left: 50%; /* Inicia desde la mitad del texto */
+    transform: translateX(-50%);
+    transition: width 0.3s ease-in-out; /* Ajusta la duración y el efecto de la animación */
+}
+
+body[data-theme="dark"] .conclusiones-section h2:hover::before {
+    width: 32%; /* Aumenta el ancho para crear el efecto de aparición */
+}
+
+body[data-theme="dark"] .conclusiones-grid p {
+    color: #ccc;
+}
+
+body[data-theme="dark"] .conclusion-card {
+    background-color: #444;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+body[data-theme="dark"] .conclusion-card:hover {
+    background-color: #555;
+}
+
+
+/*ESTILOS PARA LA SECCION AGRADECIMIENTOS*/
+body[data-theme="dark"] .agradecimientos-section {
+    background-color: #333;
+    color: #f9f9f9;
+}
+
+body[data-theme="dark"] .agradecimientos-section .wrapper {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+body[data-theme="dark"] .agradecimientos-section h2 {
+    color: #f9f9f9;
+}
+
+body[data-theme="dark"] .agradecimientos-section h2::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #ff92e499; /* Cambia el color del subrayado según tu preferencia */
+    bottom: 0;
+    left: 50%; /* Inicia desde la mitad del texto */
+    transform: translateX(-50%);
+    transition: width 0.3s ease-in-out; /* Ajusta la duración y el efecto de la animación */
+}
+
+body[data-theme="dark"] .agradecimientos-section h2:hover::before {
+    width: 40%; /* Aumenta el ancho para crear el efecto de aparición */
+}
+
+body[data-theme="dark"] .agradecimiento-card {
+    background-color: #444;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+body[data-theme="dark"] .agradecimiento-card:hover {
+    background-color: #555;
+}
+
+
+/*ESTILOS PARA LA SECCION FOOTER*/
+body[data-theme="dark"] .footer-section {
+    background-color: #222;
+    color: #f9f9f9;
+}
+
+body[data-theme="dark"] .footer-section .footer-nav a {
+    color: #f9f9f9;
+}
+
+body[data-theme="dark"] .footer-section .footer-nav a:hover {
+    text-decoration: underline;
+}
+
+
+/*ESTILOS PARA LA PAGINA RECURSOS DIGITALES*/
+body[data-theme="dark"] {
+    background-color: #222;
+    color: #f9f9f9;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body[data-theme="dark"] header {
+    background-color: #333;
+    color: #f9f9f9;
+}
+
+body[data-theme="dark"] main {
+    background-color: #222;
+}
+
+body[data-theme="dark"] .source-element img {
+    border: 4px solid #71d0a2;
+}
+
+body[data-theme="dark"] .source-element h2,
+body[data-theme="dark"] .source-element p {
+    color: #f9f9f9;
+}
+
+body[data-theme="dark"] .element-links a {
+    border: 2px solid #f9f9f9;
+    color: #f9f9f9;
+}
+
+body[data-theme="dark"] .element-links a:hover {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+body[data-theme="dark"] .back-to-home a {
+    border: 2px solid #f9f9f9;
+    color: #f9f9f9;
+}
+
+body[data-theme="dark"] .back-to-home a:hover {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+body[data-theme="dark"] footer {
+    background-color: #333;
+    color: #f9f9f9;
+}
+
+
+/*ESTILOS PARA LA PAGINA EQUIPO*/
+
+body[data-theme="dark"] {
+    background-color: #222;
+    color: #f9f9f9;
+}
+
+body[data-theme="dark"] header {
+    background-color: #333;
+    color: #f9f9f9;
+}
+
+body[data-theme="dark"] .team-member {
+    padding-top: 20px;
+    border-radius: 50px;
+    background-color: #333;
+}
+
+body[data-theme="dark"] .team-member:hover {
+    background-color: #555;
+}
+body[data-theme="dark"] .team-member img {
+    border: 4px solid #f1aee6eb;
+}
+
+body[data-theme="dark"] .team-member h2,
+body[data-theme="dark"] .team-member p {
+    color: #f9f9f9;
+}
+
+body[data-theme="dark"] .back-to-home a {
+    border: 2px solid #f9f9f9;
+    color: #f9f9f9;
+}
+
+body[data-theme="dark"] .back-to-home a:hover {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+body[data-theme="dark"] footer {
+    background-color: #333;
+    color: #f9f9f9;
+}

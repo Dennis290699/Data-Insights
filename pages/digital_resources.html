@@ -9,11 +9,12 @@
 
     <link rel="stylesheet" href="../css/style_reset.css">
     <link rel="stylesheet" href="../css/style_page_sources.css">
+    <link rel="stylesheet" href="../css/style_dark-mode.css">
 
     <title>Digital Resource</title>
 </head>
 
-<body>
+<body data-theme="light">
     <header>
         <h1>Recursos Digitales</h1>
     </header>
@@ -45,6 +46,10 @@
 
     </main>
 
+    <div id="dark-mode-toggle">
+        <img src="../assets/icons/icon-dark.png" alt="Modo Oscuro">
+    </div>
+
     <div class="back-to-home">
         <a href="../index.html">Volver a la página principal</a>
     </div>
@@ -53,6 +58,25 @@
         <p>Todos los derechos reservados &copy; 2023 | Reporte Final | Grupo 5</p>
         <p>Desarrollado solo para fines académicos | Universidad Central del Ecuador (UCE)</p>
     </footer>
+
+    <script>
+        const darkModeToggle = document.getElementById("dark-mode-toggle");
+        const body = document.body;
+        const icon = darkModeToggle.querySelector("img");
+    
+        darkModeToggle.addEventListener("click", () => {
+            if (body.getAttribute("data-theme") === "dark") {
+                body.setAttribute("data-theme", "light");
+                icon.setAttribute("src", "../assets/icons/icon-dark.png");
+                icon.setAttribute("alt", "Modo Claro");
+            } else {
+                body.setAttribute("data-theme", "dark");
+                icon.setAttribute("src", "../assets/icons/icon-light.png");
+                icon.setAttribute("alt", "Modo Oscuro");
+            }
+        });
+    </script>
+
 </body>
 
 </html>

@@ -18,14 +18,39 @@
     font-size: 28px;
     padding-left: 25px;
     padding-right: 25px;
-    padding-bottom: 15px;
     font-weight: bold;
     color: #333;
+}
+
+.team-section h2 {
+    position: relative;
+    overflow: hidden;
+}
+
+.team-section h2::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #7ecbfe;
+    /* Cambia el color del subrayado según tu preferencia */
+    bottom: 0;
+    left: 50%;
+    /* Inicia desde la mitad del texto */
+    transform: translateX(-50%);
+    transition: width 0.3s ease-in-out;
+    /* Ajusta la duración y el efecto de la animación */
+}
+
+.team-section h2:hover::before {
+    width: 33%;
+    /* Aumenta el ancho para crear el efecto de aparición */
 }
 
 .team-section .team-introduction p {
     text-align: center;
     font-size: 16px;
+    padding-top: 25px;
     padding-left: 30px;
     padding-right: 30px;
     color: #666;
@@ -210,7 +235,8 @@
 /* Efecto al pasar el mouse por encima de la caja */
 .about-more-box:hover {
     background-color: #333;
-    color: #fff; /* Cambiar el color del texto al pasar el ratón sobre la caja */
+    color: #fff;
+    /* Cambiar el color del texto al pasar el ratón sobre la caja */
 }
 
 @media screen and (max-width: 900px) {

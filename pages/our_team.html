@@ -9,6 +9,8 @@
 
     <link rel="stylesheet" href="../css/style_reset.css">
     <link rel="stylesheet" href="../css/style_page_team.css">
+    <link rel="stylesheet" href="../css/style_dark-mode.css">
+
 
     <title>Información | Equipo</title>
 </head>
@@ -31,12 +33,6 @@
                 colaborativo. Su alto nivel de habilidades en el diseño estético aporta un toque creativo y distintivo a
                 nuestros proyectos. En resumen, Tifany es una líder dedicada y talentosa, cuyo liderazgo y
                 profesionalismo son fundamentales para el éxito de nuestro equipo.</p>
-            <div class="social-links">
-                <div class="social-icons">
-                    <a href="#" target="_blank"><img src="../assets/icons/icon-facebook.png" alt="Facebook"></a>
-                    <a href="#" target="_blank"><img src="../assets/icons/icon-instagram.png" alt="Instagram"></a>
-                    <!-- Agrega más iconos de redes sociales según sea necesario -->
-                </div>
                 <!-- Agregar más enlaces a redes sociales según sea necesario -->
             </div>
         </div>
@@ -52,11 +48,6 @@
                 para trabajar en equipo. Byron demuestra un alto nivel de profesionalismo y siempre está comprometido
                 con la excelencia en su trabajo, lo que nos ayuda a tomar decisiones informadas y estratégicas para
                 nuestros proyectos.</p>
-            <div class="social-icons">
-                <a href="#" target="_blank"><img src="../assets/icons/icon-facebook.png" alt="Facebook"></a>
-                <a href="#" target="_blank"><img src="../assets/icons/icon-instagram.png" alt="Instagram"></a>
-                <!-- Agrega más iconos de redes sociales según sea necesario -->
-            </div>
         </div>
 
         <div class="team-member">
@@ -70,16 +61,15 @@
                 compartir sus conocimientos con el equipo. Su pasión por el diseño y la usabilidad se refleja en cada
                 proyecto que emprende. Con un enfoque orientado a los detalles y una actitud proactiva, Dennis es una
                 pieza clave para el éxito de nuestros proyectos web.</p>
-            <div class="social-icons">
-                <a href="#" target="_blank"><img src="../assets/icons/icon-facebook.png" alt="Facebook"></a>
-                <a href="#" target="_blank"><img src="../assets/icons/icon-instagram.png" alt="Instagram"></a>
-                <!-- Agrega más iconos de redes sociales según sea necesario -->
-            </div>
         </div>
 
         <!-- Agregar más miembros del equipo si es necesario -->
 
     </main>
+
+    <div id="dark-mode-toggle">
+        <img src="../assets/icons/icon-dark.png" alt="Modo Oscuro">
+    </div>
 
     <div class="back-to-home">
         <a href="../index.html">Volver a la página principal</a>
@@ -89,6 +79,25 @@
         <p>Todos los derechos reservados &copy; 2023 | Reporte Final | Grupo 5</p>
         <p>Desarrollado solo para fines académicos | Universidad Central del Ecuador (UCE)</p>
     </footer>
+
+    <script>
+        const darkModeToggle = document.getElementById("dark-mode-toggle");
+        const body = document.body;
+        const icon = darkModeToggle.querySelector("img");
+
+        darkModeToggle.addEventListener("click", () => {
+            if (body.getAttribute("data-theme") === "dark") {
+                body.setAttribute("data-theme", "light");
+                icon.setAttribute("src", "../assets/icons/icon-dark.png");
+                icon.setAttribute("alt", "Modo Claro");
+            } else {
+                body.setAttribute("data-theme", "dark");
+                icon.setAttribute("src", "../assets/icons/icon-light.png");
+                icon.setAttribute("alt", "Modo Oscuro");
+            }
+        });
+    </script>
+
 </body>
 
 </html>

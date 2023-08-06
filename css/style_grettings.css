@@ -18,6 +18,27 @@
     margin-bottom: 20px;
 }
 
+.agradecimientos-section h2 {
+    position: relative;
+    overflow: hidden;
+}
+
+.agradecimientos-section h2::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #7ecbfe; /* Cambia el color del subrayado según tu preferencia */
+    bottom: 0;
+    left: 50%; /* Inicia desde la mitad del texto */
+    transform: translateX(-50%);
+    transition: width 0.3s ease-in-out; /* Ajusta la duración y el efecto de la animación */
+}
+
+.agradecimientos-section h2:hover::before {
+    width: 40%; /* Aumenta el ancho para crear el efecto de aparición */
+}
+
 .agradecimientos-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;

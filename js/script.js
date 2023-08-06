@@ -212,14 +212,80 @@ const options = {
 };
 
 // Crear gráficas utilizando Chart.js
-new Chart(document.getElementById("grafica1"), {
-    type: "bar",
-    data: data1,
-    options: options
-});
 
-new Chart(document.getElementById("grafica2"), {
-    type: "pie",
-    data: data2,
-    options: options
-});
+// Variables para mantener las instancias de las gráficas
+let grafica1, grafica2;
+
+// Función para crear la gráfica 1
+function crearGrafica1() {
+    if (grafica1) {
+        grafica1.destroy(); // Destruir la instancia anterior si existe
+    }
+    grafica1 = new Chart(document.getElementById("grafica1"), {
+        type: "bar",
+        data: data1,
+        options: options
+    });
+}
+
+// Función para crear la gráfica 2
+function crearGrafica2() {
+    if (grafica2) {
+        grafica2.destroy(); // Destruir la instancia anterior si existe
+    }
+    grafica2 = new Chart(document.getElementById("grafica2"), {
+        type: "pie",
+        data: data2,
+        options: options
+    });
+}
+
+// Variable para controlar si las gráficas ya se han activado
+let graficasActivadas = false;
+
+// Función para activar las gráficas si la sección está visible
+function activarGraficas() {
+    const seccionGraficas = document.querySelector('.graficas-section');
+    const seccionRect = seccionGraficas.getBoundingClientRect();
+
+    // Verificar si la sección de gráficas está al menos 50% visible en la ventana
+    if (seccionRect.top < window.innerHeight * 0.5 && seccionRect.bottom > window.innerHeight * 0.5) {
+        if (!graficasActivadas) {
+            crearGrafica1();
+            crearGrafica2();
+            graficasActivadas = true;
+        }
+    } else {
+        graficasActivadas = false;
+    }
+}
+
+// Llamar a la función al cargar la página y al desplazarse
+document.addEventListener('DOMContentLoaded', activarGraficas);
+window.addEventListener('scroll', activarGraficas);
+
+
+//-----------------------------------------------------------------------------------------------------------------
+// PARA EL MODO OSCURO
+// Función para cambiar el modo y la imagen del icono
+function toggleMode() {
+    const body = document.body;
+    const currentMode = body.getAttribute("data-theme");
+    const newMode = currentMode === "light" ? "dark" : "light";
+
+    // Cambiar el modo
+    body.setAttribute("data-theme", newMode);
+
+    // Cambiar la imagen del icono
+    const icon = document.querySelector("#dark-mode-toggle img");
+    if (newMode === "dark") {
+        icon.setAttribute("src", "../assets/icons/icon-light.png");
+        icon.setAttribute("alt", "Modo Claro");
+    } else {
+        icon.setAttribute("src", "../assets/icons/icon-dark.png");
+        icon.setAttribute("alt", "Modo Oscuro");
+    }
+}
+
+// Evento para cambiar el modo y la imagen al hacer clic en el icono
+document.getElementById("dark-mode-toggle").addEventListener("click", toggleMode);

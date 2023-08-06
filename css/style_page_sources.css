@@ -7,6 +7,7 @@ body {
     flex-direction: column; /* Asegura que los elementos se coloquen en columna */
     min-height: 100vh; /* Asegura que el cuerpo ocupe al menos toda la altura de la ventana */
     background-color: #f9f9f9;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 header {

@@ -27,6 +27,28 @@
     margin-bottom: 20px;
 }
 
+.descripcion-section h2 {
+    position: relative;
+    overflow: hidden;
+}
+
+.descripcion-section h2::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #7ecbfe; /* Cambia el color del subrayado según tu preferencia */
+    bottom: 0;
+    left: 50%; /* Inicia desde la mitad del texto */
+    transform: translateX(-50%);
+    transition: width 0.3s ease-in-out; /* Ajusta la duración y el efecto de la animación */
+}
+
+.descripcion-section h2:hover::before {
+    width: 50%; /* Aumenta el ancho para crear el efecto de aparición */
+}
+
+
 .descripcion-section p {
     text-align: center;
     font-size: 16px;
