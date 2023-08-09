@@ -5,6 +5,8 @@
     justify-content: center;
     align-items: center;
     padding: 50px 0;
+    padding-left: 15px;
+    padding-right: 15px;
     background-color: #f9f9f9;
 }
 
@@ -83,11 +85,11 @@
 }
 
 .team-section .wrapper i:first-child {
-    left: 10px;
+    right: 10px;
 }
 
 .team-section .wrapper i:last-child {
-    right: 10px;
+    right: 6px;
 }
 
 .team-section .carousel {

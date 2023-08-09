@@ -1,3 +1,12 @@
+//LOADER
+onload = () =>{
+    const load = document.getElementById('load')
+
+    setTimeout(() =>{
+        load.style.display ='none'
+    }, 1300)
+}
+//-------------------------------------------------------------------
 // JS PARA EL HEADER
 window.addEventListener('scroll', function () {
     var header = document.querySelector('header');

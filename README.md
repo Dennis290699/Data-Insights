@@ -17,7 +17,10 @@ El repositorio contiene los siguientes archivos y carpetas:
 
 Puedes ver una demo en línea del proyecto en [https://data-insights-gamma.vercel.app/](https://data-insights-gamma.vercel.app/).
 
+### Tema claro:
 ![Captura de pantalla](./assets/images/preview.png)
+### Tema Oscuro:
+![Captura de pantalla](./assets/images/preview_dark.png)
 
 ## Cómo utilizar el proyecto
 

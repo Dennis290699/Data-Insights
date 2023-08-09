@@ -11,7 +11,10 @@
     width: 40px;
     height: 40px;
 }
-
+/*ESTILOS PARA EL LOADER*/
+body[data-theme="dark"] .load {
+    background-color: #333;
+}
 /*ESTILOS PARA EL HEADER*/
 body[data-theme="dark"] header {
     background-color: #333;
