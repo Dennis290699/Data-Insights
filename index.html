@@ -107,7 +107,8 @@
                     <span>Leader</span>
 
                     <div class="social-icons">
-                        <a href="#" target="_blank"><img src="./assets/icons/icon-facebook.png" alt="Facebook"></a>
+                        <a href="#" target="_blank" title="Facebook"><img src="./assets/icons/icon-facebook.png"
+                                alt="Facebook"></a>
                         <a href="#" target="_blank"><img src="./assets/icons/icon-instagram.png" alt="Instagram"></a>
                         <!-- Agrega más iconos de redes sociales según sea necesario -->
                     </div>
@@ -215,33 +216,152 @@
             <div class="content">
                 <h2>Gráficas</h2>
                 <p>En esta sección, presentamos algunas gráficas y visualizaciones que muestran el impacto del desempleo
-                    en los hogares de la ciudad de Quito durante el año 2020. Estas visualizaciones ayudan a comprender
+                    en los hogares de la ciudad de Quito durante el año 2020 conjuntamente con su predecesor. Estas
+                    visualizaciones ayudan a comprender
                     mejor los datos y patrones relacionados con el tema del proyecto.</p>
             </div>
 
             <div class="graficas-grid">
+
                 <div class="graficas-item">
                     <h3 class="grafica-titulo" id="tituloGrafica1"></h3>
                     <div class="grafica-container">
                         <canvas id="grafica1"></canvas>
                     </div>
                     <div class="analisis-container">
-                        <p> <br><br> <b>Análisis de la gráfica 1 </b> </p>
-                        <p>Aquí puedes agregar tus observaciones y conclusiones sobre los datos representados en esta
-                            gráfica.</p>
+                        <p> <br><br> <b>Análisis Estadístico</b> </p>
+                        <p>En la gráfica, se nota un aumento en la tasa de desempleo en Quito.
+                            En 2019, la tasa fue del 4,2%; en 2020, aumentó al 5,2%, representando un incremento de 1
+                            punto porcentual en un año.</p>
+
+                        <p><b>Impacto en Hogares:</b></p>
+                        <ol>
+                            <li><b>Ingresos Disminuidos:</b> El desempleo reduce los ingresos, afectando gastos
+                                esenciales como vivienda y alimentación.</li>
+                            <li><b>Inseguridad Financiera:</b> La incertidumbre laboral aumenta el estrés y afecta las
+                                relaciones familiares.</li>
+                            <li><b>Menor Consumo:</b> Menos ingresos llevan a menor consumo, impactando la economía
+                                local al reducir la demanda de bienes y servicios.</li>
+                            <li><b>Acceso Limitado:</b> Hogares desempleados pueden tener dificultades para acceder a
+                                servicios de salud y educación, afectando el bienestar familiar.</li>
+                        </ol>
+
+                        <p><b>Conclusión:</b> El aumento de la tasa de desempleo en Quito durante 2020 afecta los
+                            hogares, reduciendo ingresos y generando inseguridad financiera. Abordar estos desafíos es
+                            crucial para mitigar impactos y fomentar la recuperación económica.</p>
                     </div>
                 </div>
+
                 <div class="graficas-item">
                     <h3 class="grafica-titulo" id="tituloGrafica2"></h3>
                     <div class="grafica-container">
                         <canvas id="grafica2"></canvas>
                     </div>
                     <div class="analisis-container">
-                        <p> <br><br> <b>Análisis de la gráfica 2 </b> </p>
-                        <p>Aquí puedes agregar tus observaciones y conclusiones sobre los datos representados en esta
-                            gráfica.</p>
+                        <p> <br><br> <b>Análisis Estadístico</b> </p>
+                        <p>En la gráfica, se destaca un aumento en las tasas de desempleo tanto para hombres como mujeres en Quito durante el período analizado.</p>
+                        
+                        <p><b>Diferencias de Género:</b></p>
+                        <ol>
+                            <li>Las tasas de desempleo de mujeres superan a las de hombres. En 2019, mujeres tuvieron una tasa del 10,0% y hombres del 8,4%. En 2020, estas cifras aumentaron a 13,3% y 10,5%, respectivamente.</li>
+                            <li>Ambos géneros vieron incrementos de desempleo interanuales. Para hombres, aumentó en 2,1 puntos (de 8,4% a 10,5%), y para mujeres, en 3,3 puntos (de 10,0% a 13,3%).</li>
+                        </ol>
+                        
+                        <p><b>Impacto en Hogares por Género:</b></p>
+                        <ol>
+                            <li><b>Mujeres:</b> Tasas más altas de desempleo femenino pueden resultar en inseguridad financiera y dificultad para acceder a recursos esenciales.</li>
+                            <li><b>Hombres:</b> Aunque tasas son menores, el aumento puede generar preocupaciones financieras, especialmente si son proveedores principales.</li>
+                        </ol>
+                        
+                        <p><b>Conclusión:</b> El análisis de las tasas de desempleo por género en Quito revela disparidades que afectan a hogares. Acciones dirigidas a abordar estas diferencias son esenciales para mitigar impactos y diseñar soluciones inclusivas.</p>
                     </div>
                 </div>
+                
+                <div class="graficas-item">
+                    <h3 class="grafica-titulo" id="tituloGrafica3"></h3>
+                    <div class="grafica-container">
+                        <canvas id="grafica3"></canvas>
+                    </div>
+                    <div class="analisis-container">
+                        <p> <br><br> <b>Análisis Estadístico</b> </p>
+                        <p>En la gráfica, se destacan las observaciones clave sobre las tasas de desempleo por grupos de edad en Quito.</p>
+                        
+                        <p><b>Tasas de Desempleo Más Altas en Jóvenes:</b></p>
+                        <p>El grupo de edad entre 15 y 24 años presenta las tasas de desempleo más altas, reflejando desafíos en la transición al mercado laboral.</p>
+                        
+                        <p><b>Aumento en Tasas de Desempleo en Grupos Mayores:</b></p>
+                        <p>Los grupos de edad entre 25 y 44 años experimentaron aumentos anuales en las tasas de desempleo, indicando impactos negativos en segmentos más experimentados.</p>
+                        
+                        <p><b>Estabilidad en Grupos de Edad Mayores:</b></p>
+                        <p>Los grupos de edad entre 45 y 64 años mantuvieron tasas de desempleo relativamente estables, pero el aumento en el grupo +65 años debe ser vigilado.</p>
+                        
+                        <p><b>Impacto en Hogares por Edad:</b></p>
+                        <ol>
+                            <li><b>Jóvenes:</b> Tasas de desempleo más altas pueden afectar su independencia y contribución financiera a sus familias.</li>
+                            <li><b>Grupos de Edad Intermedios:</b> Aumentos en tasas de desempleo generan inseguridad financiera y desafíos para mantener estándares de vida.</li>
+                            <li><b>Grupos Mayores:</b> Tasas estables contribuyen a la estabilidad financiera, pero el aumento en grupo +65 años debe ser monitoreado.</li>
+                        </ol>
+                        
+                        <p><b>Conclusión:</b></p>
+                        <p>El análisis de las tasas de desempleo por grupos de edad en Quito resalta cómo el desempleo afecta diferencialmente a distintas generaciones. Es esencial considerar estas diferencias al diseñar políticas que aborden los efectos del desempleo en los hogares en diferentes etapas de la vida.</p>
+                    </div>
+                </div>
+                
+                <div class="graficas-item">
+                    <h3 class="grafica-titulo" id="tituloGrafica4"></h3>
+                    <div class="grafica-container">
+                        <canvas id="grafica4"></canvas>
+                    </div>
+                    <div class="analisis-container">
+                        <p> <br><br> <b>Análisis Estadístico</b> </p>
+                        <p>En la gráfica, se resaltan las siguientes observaciones sobre las tasas de subempleo por género en Quito.</p>
+                        
+                        <p><b>Aumento Sustancial del Subempleo:</b></p>
+                        <p>En 2020, hubo un aumento significativo en las tasas de subempleo para ambos géneros. El subempleo en hombres aumentó del 9,9% al 19,7%, y en mujeres aumentó del 13,2% al 23,5%.</p>
+                        
+                        <p><b>Subempleo Mayor en Mujeres:</b></p>
+                        <p>A lo largo de los dos años, las tasas de subempleo fueron más altas en mujeres, indicando situaciones laborales que no aprovechan sus habilidades.</p>
+                        
+                        <p><b>Impacto en Hogares por Género:</b></p>
+                        <ol>
+                            <li><b>Mujeres:</b> Tasas más altas sugieren roles laborales subutilizados, afectando satisfacción laboral y potencial de ingresos.</li>
+                            <li><b>Hombres:</b> Aunque tasas son más bajas, aumento en 2020 podría indicar disminución en calidad de empleo para algunos hombres.</li>
+                        </ol>
+                        
+                        <p><b>Conclusión:</b></p>
+                        <p>El análisis de las tasas de subempleo por género en Quito destaca un aumento en 2020. Las tasas más altas en mujeres señalan impacto en su participación laboral y potencial de ingresos. Abordar el subempleo es esencial para un mercado laboral equitativo y efectivo.</p>
+                    </div>
+                </div>
+                
+                <div class="graficas-item">
+                    <h3 class="grafica-titulo" id="tituloGrafica5"></h3>
+                    <div class="grafica-container">
+                        <canvas id="grafica5"></canvas>
+                    </div>
+                    <div class="analisis-container">
+                        <p> <br><br> <b>Análisis Estadístico</b> </p>
+                        <p>En la gráfica, se destacan las siguientes observaciones sobre las tasas de subempleo por grupos de edad en Quito.</p>
+                        
+                        <p><b>Aumento Generalizado del Subempleo:</b></p>
+                        <p>En 2020, se observa un aumento significativo en las tasas de subempleo en comparación con 2019 en todos los grupos de edad.</p>
+                        
+                        <p><b>Subempleo Mayor en Edades Más Jóvenes:</b></p>
+                        <p>Los grupos de edad más jóvenes experimentaron tasas más altas en ambos años, indicando desafíos en la transición laboral.</p>
+                        
+                        <p><b>Aumento en Edades Mayores:</b></p>
+                        <p>Grupos de edad más avanzada también experimentaron aumentos en las tasas de subempleo, mostrando que afecta a varios segmentos.</p>
+                        
+                        <p><b>Impacto en Hogares por Edad:</b></p>
+                        <ol>
+                            <li><b>Jóvenes:</b> Aumento en subempleo indica desafíos en entrada al mercado laboral, afectando independencia financiera.</li>
+                            <li><b>Edades Intermedias y Mayores:</b> Aumento podría afectar calidad del empleo y estabilidad financiera en hogares.</li>
+                        </ol>
+                        
+                        <p><b>Conclusión:</b></p>
+                        <p>El análisis de las tasas de subempleo por grupos de edad en Quito resalta el aumento generalizado en 2020. Es esencial abordar el subempleo para asegurar el uso pleno de habilidades y contribución efectiva a hogares y economía.</p>
+                    </div>
+                </div>
+                
                 <!-- Agregar más gráficas y análisis según sea necesario -->
             </div>
 
@@ -254,20 +374,48 @@
             <h2>Conclusiones</h2>
             <div class="conclusiones-grid">
                 <div class="conclusion-card">
-                    <h3>Concluion 1</h3>
-                    <p>Texto aqui</p>
+                    <h3>Evolución del Desempleo y sus Efectos Económicos</h3>
+                    <p>El análisis revela un aumento del 1% en la tasa de desempleo de Quito entre 2019 y 2020, lo que
+                        afecta significativamente la estabilidad financiera de los hogares. La reducción de ingresos
+                        debido al desempleo impacta en la capacidad de satisfacer necesidades básicas como vivienda,
+                        alimentación y educación. Además, la disminución del consumo surge de la caída del poder
+                        adquisitivo de los hogares desempleados. Abordar estas consecuencias demanda políticas
+                        proactivas y medidas institucionales para reactivar la economía</p>
                 </div>
 
                 <div class="conclusion-card">
-                    <h3>Concluion 2</h3>
-                    <p>Texto aqui</p>
+                    <h3>Desigualdades de Género en el Mercado Laboral</h3>
+                    <p>El análisis de género resalta que las mujeres enfrentan tasas de desempleo más altas que los
+                        hombres, tanto en 2019 como en 2020. Esta disparidad impone desafíos financieros, profesionales
+                        y sociales. Intervenciones específicas son esenciales para empoderar a las mujeres en el ámbito
+                        laboral y reducir brechas económicas y profesionales.</p>
                 </div>
 
-                <!-- Agregar más concluciones si es necesario -->
+                <div class="conclusion-card">
+                    <h3>Desafíos por Grupos Etarios</h3>
+                    <p>Las tasas de desempleo varían por grupos etarios, afectando a jóvenes y adultos. La población
+                        joven, de 15 a 24 años, experimenta tasas notoriamente elevadas, mientras que otros grupos
+                        también enfrentan aumentos. La complejidad de estos desafíos subraya la necesidad de políticas
+                        laborales integrales que se adapten a distintas etapas de la vida.</p>
+                </div>
+
+                <div class="conclusion-card">
+                    <h3>Subempleo y Calidad del Empleo</h3>
+                    <p>El análisis del subempleo indica un incremento significativo en 2020 para ambos géneros. Esto
+                        impacta la satisfacción laboral y el desarrollo profesional, especialmente para mujeres que
+                        participan en roles subutilizados. Se requieren políticas laborales que fomenten empleos de
+                        calidad y utilización completa de habilidades.</p>
+                </div>
+
+                <div class="conclusion-card">
+                    <h3>Necesidad de Políticas Laborales Inclusivas</h3>
+                    <p>Las conclusiones resaltan la necesidad imperativa de políticas laborales inclusivas. Las
+                        diferencias de género y los desafíos etarios demandan enfoques diferenciados para lograr una
+                        recuperación económica equitativa y sostenible en Quito.</p>
+                </div>
             </div>
         </div>
     </section>
-
 
     <!-- Sección de Agradecimientos -->
     <section class="agradecimientos-section" id="agradecimientos">

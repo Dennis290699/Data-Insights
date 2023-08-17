@@ -10,7 +10,14 @@
 #dark-mode-toggle img {
     width: 40px;
     height: 40px;
+    transition: transform 0.3s ease, filter 0.3s ease;
 }
+
+#dark-mode-toggle img:hover,
+#dark-mode-toggle img.jump {
+    transform: scale(1.1); /* Escalar la imagen ligeramente */
+}
+
 /*ESTILOS PARA EL LOADER*/
 body[data-theme="dark"] .load {
     background-color: #333;
@@ -359,6 +366,25 @@ body[data-theme="dark"] .graficas-item {
 
 body[data-theme="dark"] .graficas-item:hover {
     background-color: #555;
+}
+
+/* Estilos para resaltar las gráficas en modo oscuro */
+body[data-theme="dark"] .graficas-container {
+    filter: brightness(1.2); /* Ajusta el valor para resaltar o atenuar el brillo de las gráficas */
+}
+
+body[data-theme="dark"] .grafica-container canvas {
+    filter: brightness(1.5); /* Ajusta el valor para resaltar o atenuar el brillo de los elementos de la gráfica */
+}
+
+
+/* Estilos para la sección de análisis en modo oscuro */
+body[data-theme="dark"] .graficas-item .analisis-container {
+    color: #f9f9f9; /* Color del texto en modo oscuro */
+}
+
+body[data-theme="dark"] .graficas-item .analisis-container ol {
+    color: #f9f9f9; /* Color de la numeración en modo oscuro */
 }
 
 

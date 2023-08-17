@@ -81,6 +81,23 @@
     /* Cambiar el color de fondo al pasar el mouse sobre la tarjeta */
 }
 
+.analisis-container {
+    text-align: left;
+}
+
+.analisis-container ol {
+    margin-left: 20px; /* Espacio para la numeración */
+    list-style-type: decimal; /* Estilo de viñetas numeradas */
+    color: #666; /* Color de la numeración */
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px; /* Espacio inferior entre párrafos y viñetas */
+}
+
+.analisis-container li {
+    margin-bottom: 10px; /* Espacio entre ítems de la lista */
+}
+
 /* Media query para ajustar las tarjetas en pantallas pequeñas */
 @media screen and (max-width: 600px) {
     .graficas-container {

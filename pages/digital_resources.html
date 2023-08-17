@@ -23,7 +23,7 @@
     <!-- LOADER -->
     <div class="load" id="load">
         <img src="../assets/images/loader.gif" class="load_gif">
-        <h1 class="load_text">Conectando...</h1>
+        <h1 class="load_text">Solicitando...</h1>
     </div>
 
     <main>
@@ -34,7 +34,7 @@
             <div class="element-links">
                 <a href="#" target="_blank">Informe PDF</a>
                 <a href="#" target="_blank">Presentacion PDF</a>
-                <!-- Agregar más enlaces a redes sociales según sea necesario -->
+                <!-- Agregar más enlaces a otros recursos externos según sea necesario -->
             </div>
         </div>
 
@@ -43,13 +43,13 @@
             <h2>Enlaces Referencia</h2>
             <p>Se encuentra todos los recursos externos utilizados en el proyecto.</p>
             <div class="element-links">
-                <a href="#" target="_blank">INEC (2020)</a>
-                <a href="#" target="_blank">MINEDU (2020)</a>
-                <!-- Agregar más enlaces a redes sociales según sea necesario -->
+                <a href="https://cuboenemdu.ecudatanalytics.com/" target="_blank">INEC (2020)</a>
+                <a href="https://www.ecuadorencifras.gob.ec/enemdu-anual/" target="_blank">ENEMDU (2020)</a>
+                <!-- Agregar más enlaces a otros recursos externos según sea necesario -->
             </div>
         </div>
 
-        <!-- Agregar más miembros del equipo si es necesario -->
+        <!-- Agregar más elementos si es necesario -->
 
     </main>
 
@@ -66,32 +66,7 @@
         <p>Desarrollado solo para fines académicos | Universidad Central del Ecuador (UCE)</p>
     </footer>
 
-    <script>
-        //LOADER
-        onload = () => {
-            const load = document.getElementById('load')
-
-            setTimeout(() => {
-                load.style.display = 'none'
-            }, 1000)
-        }
-
-        const darkModeToggle = document.getElementById("dark-mode-toggle");
-        const body = document.body;
-        const icon = darkModeToggle.querySelector("img");
-
-        darkModeToggle.addEventListener("click", () => {
-            if (body.getAttribute("data-theme") === "dark") {
-                body.setAttribute("data-theme", "light");
-                icon.setAttribute("src", "../assets/icons/icon-dark.png");
-                icon.setAttribute("alt", "Modo Claro");
-            } else {
-                body.setAttribute("data-theme", "dark");
-                icon.setAttribute("src", "../assets/icons/icon-light.png");
-                icon.setAttribute("alt", "Modo Oscuro");
-            }
-        });
-    </script>
+    <script src="../js/script_pages.js"></script>
 
 </body>
 

@@ -173,43 +173,114 @@ carousel.addEventListener("scroll", infiniteScroll);
 
 // Obtener el elemento título de la gráfica 1 y establecer su contenido
 var grafica1Titulo = document.getElementById("tituloGrafica1");
-grafica1Titulo.textContent = "Diagrama de Barras";
+grafica1Titulo.textContent = "Índice de desempleo en los años 2019 y 2020";
 
 // Obtener el elemento título de la gráfica 2 y establecer su contenido
 var grafica2Titulo = document.getElementById("tituloGrafica2");
-grafica2Titulo.textContent = "Diagrama de pastel";
+grafica2Titulo.textContent = "Índice de desempleo por género año 2020";
 
-// Datos para las gráficas (ejemplo)
+// Obtener el elemento título de la gráfica 3 y establecer su contenido
+var grafica2Titulo = document.getElementById("tituloGrafica3");
+grafica2Titulo.textContent = "Índice de desempleo por edad año 2020";
+
+// Obtener el elemento título de la gráfica 4 y establecer su contenido
+var grafica2Titulo = document.getElementById("tituloGrafica4");
+grafica2Titulo.textContent = "Índice de subempleo por género año 2020";
+
+// Obtener el elemento título de la gráfica 5 y establecer su contenido
+var grafica2Titulo = document.getElementById("tituloGrafica5");
+grafica2Titulo.textContent = "Índice de subempleo por edad año 2020";
+
+// Datos para la gráfica 1 (pastel)
 const data1 = {
-    labels: ["Enero", "Febrero", "Marzo", "Abril", "Mayo"],
+    labels: ["2019", "2020"],
     datasets: [{
-        label: "Datos de ejemplo 1",
-        data: [12, 19, 3, 5, 2],
-        backgroundColor: "rgba(255, 99, 132, 0.5)",
-        borderColor: "rgba(255, 99, 132, 1)",
+        label: "% Taza de desempleo 2019-2020",
+        data: [4.2, 5.2], // Tasas de desempleo 2019-2020
+        backgroundColor: [
+            "rgba(255, 99, 132, 0.5)",
+            "rgba(54, 162, 235, 0.5)"
+        ],
+        borderColor: [
+            "rgba(255, 99, 132, 1)",
+            "rgba(54, 162, 235, 1)"
+        ],
         borderWidth: 1
     }]
 };
 
+// Datos para la gráfica 2 (barras)
 const data2 = {
-    labels: ["Red", "Blue", "Yellow", "Green", "Purple"],
+    labels: ["Hombre", "Mujer"],
     datasets: [{
-        label: "Datos de ejemplo 2",
-        data: [12, 19, 3, 5, 2],
-        backgroundColor: [
-            "rgba(255, 99, 132, 0.5)",
-            "rgba(54, 162, 235, 0.5)",
-            "rgba(255, 206, 86, 0.5)",
-            "rgba(75, 192, 192, 0.5)",
-            "rgba(153, 102, 255, 0.5)"
-        ],
-        borderColor: [
-            "rgba(255, 99, 132, 1)",
-            "rgba(54, 162, 235, 1)",
-            "rgba(255, 206, 86, 1)",
-            "rgba(75, 192, 192, 1)",
-            "rgba(153, 102, 255, 1)"
-        ],
+        label: "% Tasa de Desempleo (2019)",
+        data: [8.4, 10.0], // Tasas de desempleo por género en 2019
+        backgroundColor: "rgba(255, 99, 132, 0.5)",
+        borderColor: "rgba(255, 99, 132, 1)",
+        borderWidth: 1
+    },
+    {
+        label: "% Tasa de Desempleo (2020)",
+        data: [10.5, 13.3], // Tasas de desempleo por género en 2020
+        backgroundColor: "rgba(54, 162, 235, 0.5)",
+        borderColor: "rgba(54, 162, 235, 1)",
+        borderWidth: 1
+    }]
+};
+
+// Datos para la gráfica 3 (barras)
+const data3 = {
+    labels: ["15-24 años", "25-34 años", "35-44 años", "45-64 años", "+65 años"],
+    datasets: [{
+        label: "% Tasa de Desempleo (2019)",
+        data: [25.1, 10.5, 6.2, 6.0, 3.2], // Tasas de desempleo por edad en 2019
+        backgroundColor: "rgba(255, 99, 132, 0.5)",
+        borderColor: "rgba(255, 99, 132, 1)",
+        borderWidth: 1
+    },
+    {
+        label: "% Tasa de Desempleo (2020)",
+        data: [24.8, 12.7, 9.1, 9.1, 5.2], // Tasas de desempleo por edad en 2020
+        backgroundColor: "rgba(54, 162, 235, 0.5)",
+        borderColor: "rgba(54, 162, 235, 1)",
+        borderWidth: 1
+    }]
+};
+
+// Datos para la gráfica 4 (barras)
+const data4 = {
+    labels: ["Hombre", "Mujer"],
+    datasets: [{
+        label: "% Tasa de Subempleo (2019)",
+        data: [9.9, 13.2], // Tasas de subempleo por género en 2019
+        backgroundColor: "rgba(255, 99, 132, 0.5)",
+        borderColor: "rgba(255, 99, 132, 1)",
+        borderWidth: 1
+    },
+    {
+        label: "% Tasa de Subempleo (2020)",
+        data: [19.7, 23.5], // Tasas de subempleo por género en 2020
+        backgroundColor: "rgba(54, 162, 235, 0.5)",
+        borderColor: "rgba(54, 162, 235, 1)",
+        borderWidth: 1
+    }]
+};
+
+// Datos para la gráfica 5 (barras)
+const data5 = {
+    labels: ["15-24 años", "25-34 años", "35-44 años", "45-64 años", "+65 años"],
+    datasets: [{
+        label: "% Tasa de Subempleo (2019)",
+        data: [10.6, 9.1, 12.2, 13.1, 12.3], // Tasas de subempleo por edad en 2019
+        backgroundColor: "rgba(255, 99, 132, 0.5)",
+        borderColor: "rgba(255, 99, 132, 1)",
+        borderWidth: 1
+    },
+    {
+        label: "% Tasa de Subempleo (2020)",
+        data: [21.7, 20.0, 21.4, 22.7, 22.7], // Tasas de subempleo por edad en 2020
+        backgroundColor: "rgba(54, 162, 235, 0.5)",
+        borderColor: "rgba(54, 162, 235, 1)",
         borderWidth: 1
     }]
 };
@@ -223,15 +294,15 @@ const options = {
 // Crear gráficas utilizando Chart.js
 
 // Variables para mantener las instancias de las gráficas
-let grafica1, grafica2;
+let grafica1, grafica2, grafica3, grafica4, grafica5;
 
 // Función para crear la gráfica 1
 function crearGrafica1() {
     if (grafica1) {
-        grafica1.destroy(); // Destruir la instancia anterior si existe
+        grafica1.destroy();
     }
     grafica1 = new Chart(document.getElementById("grafica1"), {
-        type: "bar",
+        type: "pie", // Cambiado a "pie" para la gráfica de pastel
         data: data1,
         options: options
     });
@@ -240,11 +311,47 @@ function crearGrafica1() {
 // Función para crear la gráfica 2
 function crearGrafica2() {
     if (grafica2) {
-        grafica2.destroy(); // Destruir la instancia anterior si existe
+        grafica2.destroy();
     }
     grafica2 = new Chart(document.getElementById("grafica2"), {
-        type: "pie",
+        type: "bar", // Cambiado a "bar" para el diagrama de barras
         data: data2,
+        options: options
+    });
+}
+
+// Función para crear la gráfica 3
+function crearGrafica3() {
+    if (grafica3) {
+        grafica3.destroy();
+    }
+    grafica3 = new Chart(document.getElementById("grafica3"), {
+        type: "bar", // Tipo de gráfica en "bar" (barras)
+        data: data3,
+        options: options
+    });
+}
+
+// Función para crear la gráfica 4
+function crearGrafica4() {
+    if (grafica4) {
+        grafica4.destroy();
+    }
+    grafica4 = new Chart(document.getElementById("grafica4"), {
+        type: "bar", // Tipo de gráfica en "bar" (barras)
+        data: data4,
+        options: options
+    });
+}
+
+// Función para crear la gráfica 5
+function crearGrafica5() {
+    if (grafica5) {
+        grafica5.destroy();
+    }
+    grafica5 = new Chart(document.getElementById("grafica5"), {
+        type: "bar", // Tipo de gráfica en "bar" (barras)
+        data: data5,
         options: options
     });
 }
@@ -262,6 +369,9 @@ function activarGraficas() {
         if (!graficasActivadas) {
             crearGrafica1();
             crearGrafica2();
+            crearGrafica3();
+            crearGrafica4();
+            crearGrafica5();
             graficasActivadas = true;
         }
     } else {
@@ -298,3 +408,14 @@ function toggleMode() {
 
 // Evento para cambiar el modo y la imagen al hacer clic en el icono
 document.getElementById("dark-mode-toggle").addEventListener("click", toggleMode);
+
+// Funcion para que el icono tenga un efecto automatico cada intervalo de tiempo
+function addJumpEffect() {
+    const toggleImage = document.querySelector('#dark-mode-toggle img');
+    toggleImage.classList.add('jump');
+    setTimeout(() => {
+        toggleImage.classList.remove('jump');
+    }, 300); // Remueve la clase de salto después de 300 ms (0.3 segundos)
+}
+
+setInterval(addJumpEffect, 5000); // Ejecuta la función cada 30000 ms (30 segundos)
